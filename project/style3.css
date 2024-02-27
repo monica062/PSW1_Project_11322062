@@ -1,0 +1,259 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+    text-decoration: none;
+	font-family :"Cavolini", sans-serif;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+body{
+    background: #fff1f9;
+}
+/* navbar style*/
+#navbar{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 999;
+    transition: top .3s ease;
+    width: 100%;
+    padding: 13px 0;
+    font-family: 'Ubuntu',sans-serif;
+    background: #b4759e;
+}
+#navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#navbar .logo a{
+    color: #dfc2c2;
+    font-size: 55px;
+    font-weight: 600;
+    font-family: courier;
+}
+#navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+#navbar .menu li a{
+    color: #9dd4d6;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: color 0.3s ease;
+}
+#navbar .menu li a:hover{
+    color: #5b0e2c;
+    text-decoration: underline;
+}
+.resume_wrapper{
+	display: flex;
+	width: 800px;
+	margin: 50px auto;
+	background: rgb(247, 214, 237);
+	padding: 10px;
+}
+/* Bagian kiri */
+.resume_left{
+	width: 35%;
+	background: #982182;
+}
+
+.resume_left .resume_image{
+	width: 100%;
+}
+
+.resume_left .resume_image img{
+	width: 100%;
+	display: block;
+    border-radius:60px;
+}
+.resume_title{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 10px;
+	letter-spacing: 4px;
+}
+
+.resume_left .resume_info{
+	color: #000000;
+}
+
+.resume_left .resume_bottom{
+	padding: 30px 30px;
+}
+
+.resume_item{
+	padding: 20px 0;
+	border-bottom: 1px solid #6d1e5e;
+}
+
+.resume_item:last-child{
+	border-bottom: 0;
+}
+
+.resume_wrapper .resume_left .resume_namerole{
+	display: none;
+}
+.resume_namerole .name{
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 5px;
+	letter-spacing: 4px;
+}
+.resume_left .resume_namerole .role{
+	color: #000000;
+}
+
+ .resume_left .resume_contact .resume_info:last-child{
+	 margin-top: 10px;
+}
+
+.resume_left .resume_contact .resume_subtitle{
+	color: #fff;
+	margin-bottom: 2px;
+}
+/* Bagian kanan */
+.resume_right{
+	width: 65%;
+	padding: 20px 40px;
+	color: #26252d;
+}
+.resume_namerole{
+    text-align: center;
+}
+.resume_right .resume_namerole .name{
+	font-size: 30px;
+	font-weight: bold;
+	color: #26252d;
+    font-family:"Cavolini";
+}
+.hr{
+	height: 15px;
+    border: none;
+    background-color:#b39070;
+    margin: -20px 20px;
+}
+
+.resume_right .resume_namerole .role{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.resume_right .resume_item .resume_title{
+	color: #26252d;
+}
+
+.resume_right .resume_data{
+	display: flex;
+}
+
+.resume_right .resume_data .year{
+	padding-right: 35px;
+	width: 115px;
+	position: relative;
+}
+
+.resume_right .resume_data .content{
+	padding-left: 35px;
+	margin-bottom: 20px;
+	width: calc(100% - 115px);
+}
+
+.resume_right .resume_data .year:before{
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	background: rgb(248, 241, 228);
+	border: 1px solid #df42ad;
+	border-radius: 50%;
+}
+
+.resume_right .resume_data .year:after{
+	content: "";
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 3px;
+    height: 90%;
+    background: #6e1b54;
+}
+
+.resume_right .resume_data:last-child .year:after{
+	display: none;
+}
+.resume_right .resmue_interests .resume_info{
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+.resume_right .resmue_interests .interests .int_icon{
+	font-size: 38px;
+	color: #c54995;
+	margin-bottom: 10px;
+}
+.resume_right .resume_data .point:before{
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	background: rgb(248, 241, 228);
+	border: 1px solid #f170c8;
+	border-radius: 50%;
+}
+.resume_right .resume_data .point{
+	padding-right: 0px;
+	width: 0px;
+	position: relative;
+}
+
+@media screen and (max-width: 800px){
+	.resume_wrapper{
+		width: 95%;
+		margin: 10px auto;
+		flex-direction: column;
+	}
+	.resume_wrapper .resume_left,
+	.resume_wrapper .resume_right{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 424px){
+	.resume_wrapper .resume_right{
+		padding: 20px 30px;
+	}
+	.resume_wrapper .resume_right .resume_data{
+		flex-direction: column;
+	}
+	.resume_wrapper .resume_right .resume_data .year{
+		padding: 0;
+		margin-bottom: 5px;
+		width: 100%;
+		color: #cb4889;
+	}
+	.resume_wrapper .resume_right .resume_data .year:before,
+	.resume_wrapper .resume_right .resume_data .year:after{
+		display: none;
+	}
+	.resume_wrapper .resume_right .resume_data .content{
+		width: 100%;
+		padding: 0;
+	}
+} 
